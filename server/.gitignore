@@ -1,0 +1,27 @@
+# Dependency directories
+node_modules/
+.cache/
+
+# Environment files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+Dockerfile
+
+# Build directories
+build/
+dist/
+
+# IDE and editor files
+.vscode/
+.idea/
+
+# Compiled files
+*.log
+*.tmp
+
+# Other system files
+*.swp
+*~
