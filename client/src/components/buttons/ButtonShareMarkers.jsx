@@ -139,7 +139,7 @@ function ButtonShareMarkers() {
             onClick={sendMarkerData}
             className={`send-button ${
               mapArray.length === 0 ? "hidden" : "visible"
-            } text-xs px-3 text-center my-auto py-2 rounded-full share-button-mobile`}
+            } text-xs px-3 text-center my-auto py-2 rounded-full bg-slate-200 `}
           >
             Share tags!
           </button>
@@ -149,8 +149,8 @@ function ButtonShareMarkers() {
           {!isSharedLink && (
             <div className="flex justify-center">
               <button
-                className="share-button-mobile body-font  text-xl backdrop-blur-xl flex px-5 py-4
-                 rounded-full fixed mb-10 p4 bottom-2 mx-auto hover:bg-gray-400 "
+                className=" body-font  text-xl backdrop-blur-xl flex px-5 py-4
+                 rounded-full fixed mb-10 p4 bottom-2 mx-auto bg-gray-400 hover:bg-gray-300"
                 onClick={sendMarkerData}
               >
                 Share tags!

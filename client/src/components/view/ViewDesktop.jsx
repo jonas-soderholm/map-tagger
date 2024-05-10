@@ -47,7 +47,7 @@ const ViewDesktopMain = (props) => {
         <div className="right-part flex md:w-2/3 items-center rounded-lg">
           <button
             onClick={() => SignOut(isSharedLink)}
-            className="sign-out-button absolute button-container-color z-[1005] top-0 rounded-sm body-font right-0 m-8 items-center text-center p-[6px] text-[12px]"
+            className="bg-gray-600 hover:bg-gray-500 absolute text-slate-200 z-[1005] top-0 rounded-sm body-font right-0 m-8 items-center text-center p-[6px] text-[12px]"
           >
             {isSharedLink ? "Sign in to tag!" : "Sign out"}
           </button>

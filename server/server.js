@@ -49,11 +49,6 @@ app.use("/shared-markers", createSharedLinkRouter);
 app.use("/login", userLogin);
 app.use("/register", userRegister);
 
-// app.get("*", (req, res) => {
-//   console.log("llllllllllll");
-//   res.sendFile(path.join(__dirname, "..", "frontend", "build", "index.html"));
-// });
-
 // Start the server
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
