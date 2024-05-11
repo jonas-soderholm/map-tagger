@@ -16,6 +16,10 @@ const pool = mysql.createPool({
   user: process.env.MYSQL_USER,
   password: process.env.MYSQL_PASSWORD,
   database: process.env.MYSQL_DATABASE,
+  port: process.env.MYSQL_PORT,
+  ssl: {
+    rejectUnauthorized: false, // Add this line to trust self-signed certificate
+  },
 });
 
 pool.getConnection((err, connection) => {
@@ -44,10 +48,10 @@ const userLogin = require("./routes/User");
 const userRegister = require("./routes/UserRegister");
 
 // Use routes
-app.use("/MarkerInformation", markerInformationRouter);
-app.use("/shared-markers", createSharedLinkRouter);
-app.use("/login", userLogin);
-app.use("/register", userRegister);
+app.use("/api/MarkerInformation", markerInformationRouter);
+app.use("/api/shared-markers", createSharedLinkRouter);
+app.use("/api/login", userLogin);
+app.use("/api/register", userRegister);
 
 // Start the server
 app.listen(PORT, () => {
