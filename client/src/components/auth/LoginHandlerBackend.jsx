@@ -14,7 +14,6 @@ export async function RegisterNewAccount(email, password) {
 
     const data = await response.json();
     //console.log("Registration successful:", data);
-
     // Optionally, you can return data or perform other actions based on the response
     return data;
   } catch (error) {

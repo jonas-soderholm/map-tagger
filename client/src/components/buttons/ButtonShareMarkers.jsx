@@ -47,7 +47,6 @@ function ButtonShareMarkers() {
   const fetchGroupMarkers = async (groupId) => {
     // const url = `http://localhost:5000/shared-markers?groupId=${groupId}`;
     const url = `${process.env.REACT_APP_API_URL5000}/api/shared-markers?groupId=${groupId}`;
-    console.log("fetch marker1");
 
     try {
       const response = await fetch(url);
@@ -58,7 +57,6 @@ function ButtonShareMarkers() {
       const contentType = response.headers.get("content-type");
       if (contentType && contentType.includes("application/json")) {
         const data = await response.json();
-        console.log("DATA: ", data);
         setSharedMarkers(data);
         setIsSharedLink(true);
         setMarkersLoaded(true);
@@ -77,14 +75,10 @@ function ButtonShareMarkers() {
     const queryParams = new URLSearchParams(window.location.search);
     const groupId = queryParams.get("groupId");
 
-    console.log("Group ID:", groupId);
-
     if (groupId) {
       fetchGroupMarkers(groupId);
-      console.log("asd1");
     } else {
       setMarkersLoaded(true);
-      console.log("asd2");
     }
   }, []);
 

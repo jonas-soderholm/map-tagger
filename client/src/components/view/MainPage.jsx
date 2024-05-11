@@ -34,8 +34,6 @@ function MainPage() {
     const checkIfSharedLink = () => {
       const urlContainsShare = window.location.href.includes("shared-markers?groupId");
       setIsSharedLink(urlContainsShare);
-
-      console.log("is shared link. shared markers = ", sharedMarkers);
     };
 
     checkIfSharedLink();
