@@ -25,7 +25,6 @@ export async function RegisterNewAccount(email, password) {
 
 export async function Login(email, password, setIsLoggedIn, setErrorMessage, rememberMe) {
   try {
-    // const response = await fetch("http://localhost:5000/login", {
     const response = await fetch(`${process.env.REACT_APP_API_URL5000}/api/login`, {
       method: "POST",
       headers: {

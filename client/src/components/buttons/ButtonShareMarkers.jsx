@@ -22,7 +22,6 @@ function ButtonShareMarkers() {
     }));
 
     try {
-      // const response = await fetch("http://localhost:5000/MarkerInformation", {
       const response = await fetch(`${process.env.REACT_APP_API_URL5000}/api/MarkerInformation`, {
         method: "POST",
         headers: {
@@ -35,9 +34,8 @@ function ButtonShareMarkers() {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
 
-      // const link = `http://localhost:3000/shared-markers?groupId=${uuidMarkers}`;
       const link = `${process.env.REACT_APP_API_URL3000}/shared-markers?groupId=${uuidMarkers}`;
-      //const link = `${window.location.origin}/shared-markers?groupId=${uuidMarkers}`;
+
       setShareableLink(link);
 
       setShowModal(true); // Show the modal with the link
