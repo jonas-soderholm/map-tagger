@@ -2,14 +2,14 @@ const express = require("express");
 const cors = require("cors");
 const rateLimit = require("express-rate-limit");
 const app = express();
-//const helmet = require("helmet");
+const helmet = require("helmet");
 const PORT = process.env.PORT || 5000;
 const mysql = require("mysql2");
 const path = require("path");
 require("dotenv").config();
 
 app.use(cors());
-//app.use(helmet());
+app.use(helmet());
 
 const pool = mysql.createPool({
   host: process.env.MYSQL_HOST,
@@ -35,8 +35,6 @@ const apiLimiter = rateLimit({
   windowMs: 15 * 60 * 1000, // 15 minutes
   max: 50, // limit each IP to 100 requests per window
 });
-
-//app.use(express.static(path.join(__dirname, "..", "frontend", "build")));
 
 app.use(apiLimiter);
 app.use(express.json());
