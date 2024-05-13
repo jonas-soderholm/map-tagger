@@ -96,12 +96,12 @@ const LoginForm = () => {
                       />
                       Remember Me
                     </label>
-                    <button
+                    {/* <button
                       className="text-xs text-gray-500 hover:text-gray-900 focus:outline-none"
                       onClick={() => toggleForgetPassword(setIsForgetPassword, setErrorMessage, isForgetPassword)}
                     >
                       Forget Password?
-                    </button>
+                    </button> */}
                   </div>
                 )}
               </div>
