@@ -45,7 +45,6 @@ function ButtonShareMarkers() {
   };
 
   const fetchGroupMarkers = async (groupId) => {
-    // const url = `http://localhost:5000/shared-markers?groupId=${groupId}`;
     const url = `${process.env.REACT_APP_API_URL5000}/api/shared-markers?groupId=${groupId}`;
 
     try {
